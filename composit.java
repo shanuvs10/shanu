@@ -1,7 +1,7 @@
 import java.util.*;
 class composit
 {
-    int n,m;
+    int n,m,c=0;
     void input()
     {
         Scanner sc =new Scanner(System.in);
@@ -23,18 +23,32 @@ class composit
     }
     void magic()
     {
-        int a=0;
+        int num;
         while(m<=n)
-        {
-            int q=m;
-
-             while(q>0)
-             {
-               a=a+(q%10);
-               a*=10;
-               q/=10;
+        {num=m;
+            while(num>9)
+            {
+                int s=0;
+                while(num!=0)
+                {
+                    int d =num%10;
+                    num/=10;
+                    s+=d;
+                }
+                num=s;
             }
             m++;
+            if(num==1)
+            {
+                c++;
+                System.out.println(num+"");
+            }
         }
+
+    }
+    public static void main(String[] args) {
+        composit obj =new composit();
+        obj.input();
+        obj.magic();
     }
 }
