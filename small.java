@@ -8,7 +8,8 @@ class small
         m=sc.nextInt();
         n=sc.nextInt();
     }
-    void calcu()
+    void calcu() 
+    //tutyu
     {
         a=m-n;
         for(int i=a;i>0;i/=10)
