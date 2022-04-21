@@ -5,21 +5,23 @@ class composit
     void input()
     {
         Scanner sc =new Scanner(System.in);
-        n=sc.nextInt();
         m=sc.nextInt();
+        n=sc.nextInt();
     }
-    int comp(int q)
+    boolean comp(boolean co)
     {
-        int a=q;
-        int c=0;
-        for(int i=1;i<=a;a/=10)
+        for(int i=m ;i<=n;i++)
         {
-            if(a%i==0)
-            c++;
+            co =false;
+            for (int j = 2; j <i; j++) {
+                if (i%j==0) {
+                    co =true;
+                    break;
+                }
+            }
         }
-        if(c!=1||c!=2)
-        q=1;
-        return q; 
+        return co;
+        
     }
     void magic()
     {
@@ -41,14 +43,23 @@ class composit
             if(num==1)
             {
                 c++;
-                System.out.println(num+"");
+                System.out.print(m+"  ");
             }
         }
+        System.out.println("");
+        System.out.println("Frequency of the composite integer is : "+c);
 
     }
     public static void main(String[] args) {
         composit obj =new composit();
         obj.input();
-        obj.magic();
+        if (obj.comp(true)) {
+            obj.magic();  
+        }
+        else
+        {
+            System.out.println("INVALID INPUT");
+        }
+        
     }
 }
