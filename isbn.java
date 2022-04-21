@@ -29,8 +29,10 @@ class isbn {
         System.out.println("INVALID INPUT");
         else{
         System.out.println("sum " + sum);
-        if (sum % 11 == 0)
+          if (sum % 11 == 0)
             System.out.println("leaves no remainder -valid isbn code ");
+          else
+            System.out.println("INVALID INPUT");
         }
     }
 
