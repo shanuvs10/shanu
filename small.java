@@ -32,13 +32,6 @@ class small {
 
     }
 
-    int cout(int n) {
-        int co = 0;
-        for (int i = 1; i > 0; i /= 10) {
-            co++;
-        }
-        return co;
-    }
 
     int sum(int n) {
         int sum = 0;
