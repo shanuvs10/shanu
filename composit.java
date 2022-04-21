@@ -5,7 +5,9 @@ class composit
     void input()
     {
         Scanner sc =new Scanner(System.in);
+        System.out.println("Enter m");
         m=sc.nextInt();
+        System.out.println("Enter n");
         n=sc.nextInt();
     }
     boolean comp(boolean co)

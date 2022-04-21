@@ -7,6 +7,7 @@ class isbn {
 
     void input() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the code");
         a = sc.nextLine();
     }
 
@@ -24,7 +25,7 @@ class isbn {
 
     }
 
-    void prit() {
+    void print() {
         if(a.length()!=10)
         System.out.println("INVALID INPUT");
         else{
@@ -40,6 +41,6 @@ class isbn {
         isbn obj = new isbn();
         obj.input();
         obj.calc();
-        obj.prit();
+        obj.print();
     }
 }
