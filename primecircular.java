@@ -1,56 +1,62 @@
 import java.util.*;
+
 public class primecircular {
     String s;
-    char t;
-    int a;
-    void input ()
-    {
+    String t;
+    int a,count=0;
+
+    void input() {
         Scanner sc = new Scanner(System.in);
-        s=sc.nextLine();
-        a=sc.nextInt();
+        s = sc.nextLine();
     }
-    void calc()
-    {
+
+    void calc() {
         String w;
-        w=s;
-        int i=0;
-        primecircular obj2 =new primecircular();
-            
-        
-        for (i=0; i<=s.length(); i++); 
-        {
-            t=s.charAt(i);
-            w=w+t;
-             w=w.replace(s.charAt(s.length()),' ');
-            w=w.trim();
-            System.out.println(w);
-            if (obj2.Prime(a)) {
-                System.out.println("true");
-         }
+        w = s;
+        int i = 0;
+        primecircular obj2 = new primecircular();
 
-         if (obj2.Prime(a)) {
-            System.out.println("true");
-        
-      }
+        for (i = 0; i <s.length(); i++)
+        {
+            a = Integer.parseInt(w);
+            if (obj2.Prime(a)) {
+                count++;
+            } 
+            t = Character.toString(w.charAt(0));
+            w = w.concat(t);
+            w=w.substring(1, w.length());
+            w = w.trim();
+            System.out.println(w);
+
+        }
 
     }
-    boolean Prime(int n)
-    {
-        boolean q= false;
-        int co=0;
-        for (int i=1; i<=n ; i++) {
-            if (n%i==0) {
+
+    boolean Prime(int n) {
+        boolean q = false;
+        int co = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
                 co++;
             }
         }
-        if (co==2) {
-            q=true;
+        if (co == 2) {
+            q = true;
         }
         return q;
     }
+    void print(){
+        if (count==s.length()) {
+            System.out.println(s+" is a circular prime ");
+        } else {
+            System.out.println(s+" is not a circular prime ");
+        }
+    }
+
     public static void main(String[] args) {
-        primecircular obj =new primecircular();
+        primecircular obj = new primecircular();
         obj.input();
         obj.calc();
+        obj.print();
     }
 }
