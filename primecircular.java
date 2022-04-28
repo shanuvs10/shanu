@@ -7,7 +7,7 @@ public class primecircular {
 
     void input() {
         Scanner sc = new Scanner(System.in);
-        s = sc.nextLine();
+        s = sc.nextLine();//Geting input from user
     }
 
     void calc() {
@@ -16,7 +16,7 @@ public class primecircular {
         int i = 0;
         primecircular obj2 = new primecircular();
 
-        for (i = 0; i <s.length(); i++)
+        for (i = 0; i <s.length(); i++)// calculating the prime circular no
         {
             a = Integer.parseInt(w);
             if (obj2.Prime(a)) {
@@ -32,11 +32,11 @@ public class primecircular {
 
     }
 
-    boolean Prime(int n) {
+    boolean Prime(int n) {//boolean method
         boolean q = false;
         int co = 0;
         for (int i = 1; i <= n; i++) {
-            if (n % i == 0) {
+            if (n % i == 0) {//prime no checking
                 co++;
             }
         }
@@ -46,7 +46,7 @@ public class primecircular {
         return q;
     }
     void print(){
-        if (count==s.length()) {
+        if (count==s.length()) {//checks the prime circular
             System.out.println(s+" is a circular prime ");
         } else {
             System.out.println(s+" is not a circular prime ");
