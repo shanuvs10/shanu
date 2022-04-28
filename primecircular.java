@@ -1,6 +1,7 @@
 import java.util.*;
 public class primecircular {
     String s;
+    char t;
     int a;
     void input ()
     {
@@ -10,14 +11,25 @@ public class primecircular {
     }
     void calc()
     {
+        String w;
+        w=s;
+        int i=0;
         primecircular obj2 =new primecircular();
-        for (int i=0; i<=a.length(); i++); i++>)
+        while (1>0) {
+            
+        
+        for (i=0; i<=s.length(); i++); 
         {
-
-        }
-        if (obj2.Prime(a)) {
+            t=s.charAt(i);
+            w=w+t;
+            w=w.replace(s.charAt(s.length()),' ');
+            w=w.trim();
+            System.out.println(w);
+         }
+         if (obj2.Prime(a)) {
             System.out.println("true");
         }
+      }
 
     }
     boolean Prime(int n)
