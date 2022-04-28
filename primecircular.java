@@ -15,20 +15,22 @@ public class primecircular {
         w=s;
         int i=0;
         primecircular obj2 =new primecircular();
-        while (1>0) {
             
         
         for (i=0; i<=s.length(); i++); 
         {
             t=s.charAt(i);
             w=w+t;
-            w=w.replace(s.charAt(s.length()),' ');
+             w=w.replace(s.charAt(s.length()),' ');
             w=w.trim();
             System.out.println(w);
+            if (obj2.Prime(a)) {
+                System.out.println("true");
          }
+
          if (obj2.Prime(a)) {
             System.out.println("true");
-        }
+        
       }
 
     }
