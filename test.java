@@ -1,7 +1,7 @@
 public class test {
    public static void main(String[] args) {
        test obj = new test();
-       obj.run("1234");
+       obj.testerforcartoon(140);
    }
 
 private void run(String s) {
@@ -27,4 +27,19 @@ private void run(String s) {
             //System.out.println("1");
         }
 } 
+void testerforcartoon(int n){
+    int y=n,q,s,c=0;int i=48;
+         while (y>0) {
+
+             q=y/i;
+             y=y-(q*i);
+             s=q*i;
+             if (q!=0) {
+                System.out.println(q+"*"+i+" = " +s);
+                c=q+c;
+             }
+             i=i/2;
+         }
+         System.out.println("total no of cartons = "+c);  
+}
 }
