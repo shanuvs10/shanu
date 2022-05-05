@@ -1,8 +1,5 @@
 public class test {
-   public static void main(String[] args) {
-       test obj = new test();
-       obj.testerforcartoon(140);
-   }
+   
 
 private void run(String s) {
     String w,t;
@@ -28,18 +25,31 @@ private void run(String s) {
         }
 } 
 void testerforcartoon(int n){
-    int y=n,q,s,c=0;int i=48;
+    if (n<=1000) {
+      int y=n,q,s,c=0;int i=48;
          while (y>0) {
 
              q=y/i;
              y=y-(q*i);
              s=q*i;
-             if (q!=0) {
+             if (i>=6) {
                 System.out.println(q+"*"+i+" = " +s);
                 c=q+c;
              }
+             if (q!=0&&i<6) {
+                 System.out.println("the remaining box = "+q+"*"+i+" = " +s);
+                 c++;
+             }
              i=i/2;
          }
-         System.out.println("total no of cartons = "+c);  
+         System.out.println("total no of cartons = "+c); 
+        } 
+        else{
+            System.out.println("INVALID INPUT");
+        }
+}
+public static void main(String[] args) {
+    test obj = new test();
+    obj.testerforcartoon(4296);
 }
 }
