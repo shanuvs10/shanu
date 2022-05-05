@@ -49,10 +49,21 @@ void testerforcartoon(int n){
         }
 }
 void goldb(){
+    for (int i=10; i>0; i--) {
+        if(i%2!=0) {
+           for(int j=i; j>0; j--) {
+            if(j%2!=0) {
+            }
+            System.out.print('*');
+        }
+        System.out.println();
+    }
+    }  
+        
     
 }
 public static void main(String[] args) {
     test obj = new test();
-    obj.testerforcartoon(726);
+    obj.goldb();
 }
 }
