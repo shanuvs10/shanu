@@ -6,7 +6,7 @@ public class cartoon {
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enetr the input ");
-        n=sc.nextInt();
+        n=sc.nextInt();//Geting n from user
     }
     void calc()
     {
@@ -15,7 +15,7 @@ public class cartoon {
                while (y>0) {
       
                    q=y/i;
-                   y=y-(q*i);
+                   y=y-(q*i);//calculating the next no
                    s=q*i;
                    if (i>=6&&q!=0) {
                       System.out.println(q+"*"+i+" = " +s);
@@ -25,12 +25,12 @@ public class cartoon {
                        System.out.println("the remaining box = "+q+"*"+i+" = " +s);
                        c++;
                    }
-                   i=i/2;
+                   i=i/2;//updating i
                }
                System.out.println("total no of cartons = "+c); 
               } 
               else{
-                  System.out.println("INVALID INPUT");
+                  System.out.println("INVALID INPUT");//print for invalid Input
               }
     }
     public static void main(String[] args) {
