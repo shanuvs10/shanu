@@ -32,7 +32,7 @@ void testerforcartoon(int n){
              q=y/i;
              y=y-(q*i);
              s=q*i;
-             if (i>=6) {
+             if (i>=6&&q!=0) {
                 System.out.println(q+"*"+i+" = " +s);
                 c=q+c;
              }
@@ -48,8 +48,11 @@ void testerforcartoon(int n){
             System.out.println("INVALID INPUT");
         }
 }
+void goldb(){
+
+}
 public static void main(String[] args) {
     test obj = new test();
-    obj.testerforcartoon(4296);
+    obj.testerforcartoon(726);
 }
 }

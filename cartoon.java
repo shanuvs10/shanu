@@ -16,7 +16,7 @@ public class cartoon {
                    q=y/i;
                    y=y-(q*i);
                    s=q*i;
-                   if (i>=6) {
+                   if (i>=6&&q!=0) {
                       System.out.println(q+"*"+i+" = " +s);
                       c=q+c;
                    }
