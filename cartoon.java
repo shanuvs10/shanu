@@ -5,7 +5,7 @@ public class cartoon {
     void input()
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enetr the input ");
+        System.out.println("Enter the input ");
         n=sc.nextInt();//Geting n from user
     }
     void calc()
