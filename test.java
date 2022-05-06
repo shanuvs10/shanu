@@ -48,15 +48,33 @@ void testerforcartoon(int n){
             System.out.println("INVALID INPUT");
         }
 }
-void goldb(){
-    for (int i=10; i>0; i--) {
-        if(i%2!=0) {
-           for(int j=i; j>0; j--) {
-            if(j%2!=0) {
-            }
-            System.out.print('*');
+boolean primeno(int m){
+    boolean q=false;
+    int c=0;
+    for(int i=1;i<= m; i++){
+        if (m%i==0) {
+            c++;
         }
-        System.out.println();
+    }
+    if (c==2) {
+        q=true;
+    }
+    return q;
+}
+void goldb(int n){
+    int s;
+    for (int i=n; i>0; i--) {
+        if(primeno(i)) {
+           for(int j=i; j>0; j--) {
+            if(primeno(j)) {
+                s=i+j;
+                if (s==n) {
+                    System.out.println(j+" , "+i);
+                }
+            }
+            //System.out.print('*');
+        }
+        //System.out.println();
     }
     }  
         
@@ -64,6 +82,6 @@ void goldb(){
 }
 public static void main(String[] args) {
     test obj = new test();
-    obj.goldb();
+    obj.goldb(30);
 }
 }
