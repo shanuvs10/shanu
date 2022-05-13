@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class prime_adem_no {
     int n,m;
     int c;
+    boolean p;
     void input(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter INPUT n : ");
@@ -23,23 +24,27 @@ public class prime_adem_no {
         }
         return q;
     }
-    boolean adam_no(int q){
-        int t=0,y=0; boolean p= false;
-        for (int i = q; i >0; i/=10) {
+    int reverse(int n){
+        int t=0,y=0; int p=0;
+        for (int i = n; i >0; i/=10) {
             t=i%10;
             y=(10*y)+t;
         }
-        int a=0,s=0;
-        int e=(int)Math.pow(q, 2);
-        for (int j = e; j >0; j/=10) {
-            a=j%10;
-            s=(10*s)+a;
+        if (n==y) {
+             p =y;
+       }
+       System.out.println(p);
+       return p;
+    }
+    boolean adam_no(int q){
+        int n=q;
+        int nn=n*n;
+        int rn=reverse(n);
+        int rnn=reverse(nn);
+        int srnn=reverse((int)Math.sqrt(rnn));
+        if (n==rn&&srnn==rnn) {
+            p= true;
         }
-        s=(int)Math.sqrt(s);
-        if (q==s) {
-             p = true;
-        }
-        System.out.println(p);
         return p;
     }
     void calc(){
@@ -55,7 +60,7 @@ public class prime_adem_no {
     public static void main(String[] args) {
         prime_adem_no obj = new prime_adem_no(); 
         //obj.input();
-        obj.adam_no(13);
+        obj.adam_no(103);
         //obj.calc();
     }
 }
