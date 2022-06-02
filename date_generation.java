@@ -12,9 +12,13 @@ public class date_generation {
     }
     String yearcount(int n)
     {
+        int i=0;
+        int a=0,tem=0;
         int month_no[]={31,28,31,30,31,30,31,31,30,31,30,31};
-        if () {
-            
+        for(;i >= month_no.length;i++) {
+            tem=tem+month_no[i];
+            a=tem-a;
+
         }
     }
     public static void main(String[] args) {
