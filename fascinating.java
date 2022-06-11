@@ -1,44 +1,68 @@
+import java.util.Scanner;
+
 public class fascinating {
-    void nocheck() 
+    int m,n;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter m");
+        m = sc.nextInt();// Geting m from user
+        System.out.println("Enter n");
+        n = sc.nextInt();// Geting n from user
+    }
+
+    boolean nocheck(String s) 
     {
-        String s="123456789";
-        char r=' ',t=' ';
+        //String s="123456789";
+        int t=0;
         int c=0;boolean checks=false;
         for (int i=0;i<s.length();i++)
         {
-            System.out.println("1");
             for(int j=1;j<=9;j++)
             {
-                System.out.println("2");
-                r=s.charAt(i);
-                t=(char)j;
-                if (t==r) {
-                    System.out.println("3");
+                t =Character.getNumericValue(s.charAt(i));
+                if (j==t) {
                     c++;
+                    break;
                 }
                 
             }
         }
         if (c==9) {
             checks=true;
-            System.out.println(true);
+            //System.out.println(true);
+            c=0;
         }
-        //return checks;
+        return checks;
     }
 
-    String number(int n)
+
+    String number(int p)
     {
         int a=0;String q="";
         for (int i=1; i<=3; i++)
         {
-            a=n*i;
+            a=p*i;
             q=a+q;
         }
         return q;
     }
+
+    void checksntom() 
+    {
+        fascinating obj2 = new fascinating();
+        for (;m<n;m++)
+        {
+            String l="";
+            l= obj2.number(m);
+            if (obj2.nocheck(l)) {
+                System.out.println(m);
+            }
+        }
+    }
     public static void main(String[] args) {
         fascinating obj = new fascinating();
-        obj.nocheck();
-        System.out.println(obj.number(273));
+        obj.input();
+        obj.checksntom();
     }
 }
