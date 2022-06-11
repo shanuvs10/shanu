@@ -16,12 +16,12 @@ public class fascinating {
         //String s="123456789";
         int t=0;
         int c=0;boolean checks=false;
-        for (int i=0;i<s.length();i++)
+        for (int i=1;i<=9;i++)
         {
-            for(int j=1;j<=9;j++)
+            for(int j=0;j<s.length();j++)
             {
-                t =Character.getNumericValue(s.charAt(i));
-                if (j==t) {
+                t =Character.getNumericValue(s.charAt(j));
+                if (i==t) {
                     c++;
                     break;
                 }
@@ -39,26 +39,30 @@ public class fascinating {
 
     String number(int p)
     {
-        int a=0;String q="";
-        for (int i=1; i<=3; i++)
-        {
-            a=p*i;
-            q=a+q;
-        }
+        String q="";
+        int n1=p;
+        int n2=p*2;
+        int n3=p*3;
+        q=String.valueOf(n1)+String.valueOf(n2)+String.valueOf(n3);
         return q;
     }
 
     void checksntom() 
     {
         fascinating obj2 = new fascinating();
+        int counting=0;
+        System.out.println("The fascinating numbers are");
         for (;m<n;m++)
         {
             String l="";
             l= obj2.number(m);
             if (obj2.nocheck(l)) {
-                System.out.println(m);
+                System.out.print(m+"\t");
+                counting++;
             }
         }
+        System.out.println("");
+        System.out.println("The  frequency of fascinating numbers is "+counting);
     }
     public static void main(String[] args) {
         fascinating obj = new fascinating();
