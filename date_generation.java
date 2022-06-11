@@ -10,7 +10,7 @@ public class date_generation {
         }
         return q; 
     }
-    String yearcount(int n)
+    void yearcount(int n)
     {
         int i=0;
         int a=0,tem=0;
@@ -20,6 +20,7 @@ public class date_generation {
             a=tem-a;
 
         }
+        return ;
     }
     public static void main(String[] args) {
         date_generation obj =new date_generation();
