@@ -25,26 +25,19 @@ public class prime_adem_no {
         return q;
     }
     int reverse(int n){
-        int t=0,y=0; int p=0;
-        for (int i = n; i >0; i/=10) {
-            t=i%10;
-            y=(10*y)+t;
+        int t,s=0;
+        for(;n>0;n/=10){
+            t=n%10;
+            s=(s*10)+t;
+            
+            System.out.println(s);
         }
-        if (n==y) {
-             p =y;
-       }
-       System.out.println(p);
-       return p;
+       
+       return s;
     }
     boolean adam_no(int q){
-        int n=q;
-        int nn=n*n;
-        int rn=reverse(n);
-        int rnn=reverse(nn);
-        int srnn=reverse((int)Math.sqrt(rnn));
-        if (n==rn&&srnn==rnn) {
-            p= true;
-        }
+        int n=q;int rn =reverse(n);
+        
         return p;
     }
     void calc(){
@@ -60,7 +53,7 @@ public class prime_adem_no {
     public static void main(String[] args) {
         prime_adem_no obj = new prime_adem_no(); 
         //obj.input();
-        obj.adam_no(103);
+        System.out.println(obj.reverse(12)); 
         //obj.calc();
     }
 }
