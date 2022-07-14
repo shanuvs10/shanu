@@ -1,6 +1,22 @@
-import javax.lang.model.util.ElementScanner14;
+import java.util.Scanner;
 
 public class date_generation {
+    int dayno,year,dayadd;
+    int arr[]={31,28,31,30,31,30,31,31,30,31,30,31};
+    String name[]={"JANUARY", "FEBRUARY","MARCH",
+    "APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER",
+    "OCTOBER","NOVERMBER","DECEMBER"};
+    void input()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Day no. ");
+        dayno= sc.nextInt();
+        System.out.println("Enter the year ");
+        year= sc.nextInt();
+        System.out.println("Enter the Day to be added ");
+        dayadd= sc.nextInt();
+
+    }
     
     boolean leap_year(int year)
     {
@@ -22,8 +38,18 @@ public class date_generation {
         }
         return ;
     }
+    void calc()
+    {
+        if ((dayno<=366&&dayno>=1)&&(year>99&&year<10000)&&(dayadd>0&&dayadd<=100)) {
+            if (leap_year(year)) {
+                
+            } else {
+                
+            }
+        }
+    }
     public static void main(String[] args) {
         date_generation obj =new date_generation();
-        System.out.println(obj.leap_year(2018));
+        
     }
 }
