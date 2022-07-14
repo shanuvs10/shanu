@@ -76,13 +76,8 @@ void goldb(int n){
         }
         //System.out.println();
     }
-    }  
-        
-    
-}
-void revers(){
-    
-}
+    }  }  
+
 public static void main(String[] args) {
     test obj = new test();
     obj.goldb(30);
