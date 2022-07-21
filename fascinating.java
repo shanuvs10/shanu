@@ -13,14 +13,15 @@ public class fascinating {
 
     boolean nocheck(String s) 
     {
-        //String s="123456789";
+        String ss="123456789";
         int t=0;
         int c=0;boolean checks=false;
+        System.out.println("21");
         for (int i=1;i<=9;i++)
         {
-            for(int j=0;j<s.length();j++)
+            for(int j=0;j<ss.length();j++)
             {
-                t =Character.getNumericValue(s.charAt(j));
+                t =Character.getNumericValue(ss.charAt(j));
                 if (i==t) {
                     c++;
                     break;
@@ -66,7 +67,8 @@ public class fascinating {
     }
     public static void main(String[] args) {
         fascinating obj = new fascinating();
-        obj.input();
-        obj.checksntom();
+        //System.out.println(nocheck("21"));
+        //obj.input();
+        //obj.checksntom();
     }
 }

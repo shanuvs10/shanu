@@ -77,9 +77,30 @@ void goldb(int n){
         //System.out.println();
     }
     }  }  
-
+ void fac(){
+    String ss="123456789";
+        int t=0,b=0;
+        int c=0;boolean checks=false;
+        System.out.println("21");
+        for (char i='1';i<='9';i++ ) {
+            for (char j = 0; j < ss.length(); j++) {
+                System.out.print(i+"  ");
+                t=ss.charAt(j);
+                if (i==t) {
+                    
+                }
+            }
+            System.out.println();
+        }
+        if (c==9) {
+            checks=true;
+            c=0;
+        }
+        System.out.println(checks);
+        
+ }
 public static void main(String[] args) {
     test obj = new test();
-    obj.goldb(30);
+    obj.fac();
 }
 }
