@@ -8,7 +8,7 @@ System.out.println("ENTER DAY NUMER(>=1 AND<=366) : ");
 int day_number=scan.nextInt();
 System.out.println("ENTER YEAR(4 DIGIT) : ");
 int year=scan.nextInt();
-System.out.println("ENTER DATE AFTER(N)(>=1 AND<=100) : ");
+System.out.println("ENTER DATE AFTER(N)(>=1 AND3<=100) : ");
 int n=scan.nextInt();
 
 if(day_number<1 || day_number>366)
