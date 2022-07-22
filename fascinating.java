@@ -13,31 +13,41 @@ public class fascinating {
 
     boolean nocheck(String s) 
     {
-        String ss="123456789";
+        //String ss="1234596871";
         int t=0;
-        int c=0;boolean checks=false;
-        System.out.println("21");
-        for (int i=1;i<=9;i++)
+        int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c=0;boolean checks=false;
+        //System.out.println("21");
+        for (int i=0;i<s.length();i++)
         {
-            for(int j=0;j<ss.length();j++)
-            {
-                t =Character.getNumericValue(ss.charAt(j));
-                if (i==t) {
-                    c++;
-                    break;
+              t =Character.getNumericValue(s.charAt(i));
+                if (t==1) {
+                    c1++;
+                }else if(t==2) {
+                    c2++;
+                }else if(t==3) {
+                    c3++;
+                }else if(t==4) {
+                    c4++;
+                }else if(t==5) {
+                    c5++;
+                }else if(t==6) {
+                    c6++;
+                }else if(t==7) {
+                    c7++;
+                }else if(t==8) {
+                    c8++;
+                }else if(t==9) {
+                    c9++;
                 }
-                
-            }
         }
-        if (c==9) {
+        c=c1+c2+c3+c4+c5+c6+c7+c8+c9;
+        if (c==9&&c1==1&&c2==1&&c3==1&&c4==1&&c5==1&&c6==1&&c7==1&&c8==1&&c9==1) {
             checks=true;
             //System.out.println(true);
             c=0;
         }
         return checks;
     }
-
-
     String number(int p)
     {
         String q="";
@@ -50,25 +60,26 @@ public class fascinating {
 
     void checksntom() 
     {
-        fascinating obj2 = new fascinating();
         int counting=0;
         System.out.println("The fascinating numbers are");
-        for (;m<n;m++)
-        {
-            String l="";
-            l= obj2.number(m);
-            if (obj2.nocheck(l)) {
+        while (m<n) {
+            if(nocheck(number(m)))
+            {
                 System.out.print(m+"\t");
                 counting++;
             }
+            m++;
+        }
+        if (counting==0) {
+            System.out.println("NIL");
         }
         System.out.println("");
         System.out.println("The  frequency of fascinating numbers is "+counting);
     }
     public static void main(String[] args) {
         fascinating obj = new fascinating();
-        //System.out.println(nocheck("21"));
-        //obj.input();
-        //obj.checksntom();
+        //obj.nocheck("21");
+        obj.input();
+        obj.checksntom();
     }
 }
