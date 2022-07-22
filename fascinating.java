@@ -13,10 +13,8 @@ public class fascinating {
 
     boolean nocheck(String s) 
     {
-        //String ss="1234596871";
         int t=0;
         int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0,c7=0,c8=0,c9=0,c=0;boolean checks=false;
-        //System.out.println("21");
         for (int i=0;i<s.length();i++)
         {
               t =Character.getNumericValue(s.charAt(i));
@@ -43,7 +41,6 @@ public class fascinating {
         c=c1+c2+c3+c4+c5+c6+c7+c8+c9;
         if (c==9&&c1==1&&c2==1&&c3==1&&c4==1&&c5==1&&c6==1&&c7==1&&c8==1&&c9==1) {
             checks=true;
-            //System.out.println(true);
             c=0;
         }
         return checks;
@@ -78,7 +75,6 @@ public class fascinating {
     }
     public static void main(String[] args) {
         fascinating obj = new fascinating();
-        //obj.nocheck("21");
         obj.input();
         obj.checksntom();
     }
