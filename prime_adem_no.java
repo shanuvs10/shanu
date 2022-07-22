@@ -59,7 +59,6 @@ public class prime_adem_no {
     public static void main(String[] args) {
         prime_adem_no obj = new prime_adem_no(); 
         obj.input();
-        //System.out.println(obj.reverse(12)); 
         obj.calc();
     }
 }
