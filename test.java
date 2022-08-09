@@ -99,8 +99,15 @@ void goldb(int n){
         System.out.println(checks);
         
  }
+ void stringing()
+ {
+    String s1="run", s2="childlikeness", s3 ="among us";
+ String s=s1.charAt(0)+s2.substring(6,7)+(s1.concat(s2).charAt(3))+s2.charAt(s2.indexOf('k'))+"  "+s1.charAt((8-6+5-4-9+7-3+4-2))+
+s3.charAt(s1.indexOf('n'))+s2.charAt(3)+s2.charAt(s2.lastIndexOf('l'));
+System.out.println(s);
+ }
 public static void main(String[] args) {
     test obj = new test();
-    obj.fac();
+    obj.stringing();
 }
 }
