@@ -16,19 +16,18 @@ public class non_boundry_matrix {
        }
         
        void sort() {
-        b=new int [m][m];
-        int key=a[1][1];
+        b=new int [m][m];int k=0,big=0;
+        int c[]=new int[(m-1)*(m-1)];
+        int key=a[1][1];int tem;
         for (int i = 1; i < m-1; i++) {
             for (int j = 1; j < m-1; j++) {
-                if(key<a[i][j]){
-                    b[i][j]=a[i][j];
-                    key=a[i][j];
-                    System.out.println("1");
-                }
-                else{
-                    key=a[i][j];
-                    
-                    System.out.println("2");
+                c[k++]=a[i][j];
+            }
+        }
+        for (int i = 0; i <c.length; i++) {
+            for (int j = 0; j <c.length; j++) {
+                if (big>c[i]) {
+                    tem=c[i];
                 }
             }
         }
