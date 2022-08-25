@@ -106,8 +106,28 @@ void goldb(int n){
 s3.charAt(s1.indexOf('n'))+s2.charAt(3)+s2.charAt(s2.lastIndexOf('l'));
 System.out.println(s);
  }
+ void biggest()
+ {
+    int m[][]=new int[3][3];
+    int big=0;
+    m[0][0]=1;m[0][1]=2;m[0][2]=3;
+    m[1][0]=4;m[1][1]=5;m[1][2]=6;
+    m[2][0]=7;m[2][1]=8;m[2][2]=9;
+    
+    
+    for (int i = 0; i < m.length; i++) {
+        for (int j = 0; j < m[i].length; j++) {
+            if (m.length-i==j) {
+                if (m[i][j]>big) {
+                    big=m[i][j];
+                }
+            }
+        }
+    }
+    System.out.println("big is " +big);
+ }
 public static void main(String[] args) {
     test obj = new test();
-    obj.stringing();
+    obj.biggest();
 }
 }
