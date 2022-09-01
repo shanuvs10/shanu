@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch fill_matrix",
+            "request": "launch",
+            "mainClass": "fill_matrix",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -5,7 +5,8 @@ public class non_boundry_matrix {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number M: ");
         m=sc.nextInt();
-        a=new int [m][m];
+        if (m>3&&m<10) {
+            a=new int [m][m];
         System.out.println("Enter the matrix");
            for (int i = 0; i < m; i++) {
                for (int j = 0; j < m; j++) {
@@ -13,6 +14,12 @@ public class non_boundry_matrix {
                    
                }
            }
+        }
+        else {
+            System.out.println("Invalid M");
+            System.exit(0);
+        }
+        
        }
         
        void sort() {
