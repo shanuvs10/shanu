@@ -1,0 +1,133 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Symmeterric_matrix",
+            "request": "launch",
+            "mainClass": "Symmeterric_matrix",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch cartoon",
+            "request": "launch",
+            "mainClass": "cartoon",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch composit",
+            "request": "launch",
+            "mainClass": "composit",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch date",
+            "request": "launch",
+            "mainClass": "date",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch date_generation",
+            "request": "launch",
+            "mainClass": "date_generation",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch fasc",
+            "request": "launch",
+            "mainClass": "fasc",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch fascinating",
+            "request": "launch",
+            "mainClass": "fascinating",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch goldbach",
+            "request": "launch",
+            "mainClass": "goldbach",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch isbn",
+            "request": "launch",
+            "mainClass": "isbn",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch matrix_mirror",
+            "request": "launch",
+            "mainClass": "matrix_mirror",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch matrix_rotation",
+            "request": "launch",
+            "mainClass": "matrix_rotation",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch non_boundry_matrix",
+            "request": "launch",
+            "mainClass": "non_boundry_matrix",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch prime_adem_no",
+            "request": "launch",
+            "mainClass": "prime_adem_no",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch primecircular",
+            "request": "launch",
+            "mainClass": "primecircular",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch small",
+            "request": "launch",
+            "mainClass": "small",
+            "projectName": "shanu_f34c67c6"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "shanu_f34c67c6"
+        }
+    ]
+}

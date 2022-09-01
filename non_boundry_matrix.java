@@ -1,6 +1,6 @@
 import java.util.*;
 public class non_boundry_matrix {
-    int m,a[][],b[][];
+    int m,a[][],b[],c[][];
     void input(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number M: ");
@@ -16,26 +16,35 @@ public class non_boundry_matrix {
        }
         
        void sort() {
-        b=new int [m][m];int k=0,big=0;
-        int c[]=new int[(m-1)*(m-1)];
-        int key=a[1][1];int tem;
+        int tem;c=new int[m][m];
+        b=new int [(m-2)*(m-2)];int k=0;
         for (int i = 1; i < m-1; i++) {
             for (int j = 1; j < m-1; j++) {
-                c[k++]=a[i][j];
+                b[k]=a[i][j];
+                k++;
             }
         }
-        for (int i = 0; i <c.length; i++) {
-            for (int j = 0; j <c.length; j++) {
-                if (big>c[i]) {
-                    tem=c[i];
-                }
+        for (int i = 0; i < k-1; i++) {
+            for (int j = 0; j < k-1-i; j++) {
+               if(b[j]>b[j+1])
+               {
+                   tem = b[j];
+                   b[j]=b[j+1];
+                   b[j+1]=tem;
+               }
             }
         }
+        k=0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {
-                if (i==0 ||j==0||i==m-1||j==m-1) {
-                    b[i][j]=a[i][j];
-                }
+               if(i==0||j==0||i==m-1||j==m-1)
+               {
+                   c[i][j]=a[i][j];
+               }
+               else
+               {
+                   c[i][j]=b[k++];
+               }
             }
         }
     }
@@ -53,7 +62,7 @@ public class non_boundry_matrix {
         System.out.println("REARRANGED");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {
-                System.out.print(b[i][j]+ "\t");
+                System.out.print(c[i][j]+ "\t");
             }
             System.out.println("");
         }
@@ -65,8 +74,8 @@ public class non_boundry_matrix {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {
                 if (i==j||i+j==m-1) {
-                    System.out.print(b[i][j]+ "\t");
-                    sum+=b[i][j];
+                    System.out.print(c[i][j]+ "\t");
+                    sum+=c[i][j];
                 }
                 else
                 System.out.print("\t");
