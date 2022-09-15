@@ -1,5 +1,5 @@
 public class test {
-   
+   int sum;
 
 private void run(String s) {
     String w,t;
@@ -126,8 +126,20 @@ System.out.println(s);
     }
     System.out.println("big is " +big);
  }
+
+ int dig(int n){
+    
+    if(n<=0){
+        return 0;
+    }
+    else {
+        sum=+dig(n/10)%10;
+        System.out.println(sum);
+        return sum;
+    }
+ }
 public static void main(String[] args) {
     test obj = new test();
-    obj.biggest();
+    System.out.println(obj.dig(198));
 }
 }
