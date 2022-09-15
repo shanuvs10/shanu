@@ -138,6 +138,7 @@ System.out.println(s);
         return sum;
     }
  }
+ 
 public static void main(String[] args) {
     test obj = new test();
     System.out.println(obj.dig(198));

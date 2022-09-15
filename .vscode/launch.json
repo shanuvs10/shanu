@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch quiz",
+            "request": "launch",
+            "mainClass": "quiz",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
+            "name": "Launch non_boundry_matrix",
+            "request": "launch",
+            "mainClass": "non_boundry_matrix",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
             "name": "Launch test",
             "request": "launch",
             "mainClass": "test",
