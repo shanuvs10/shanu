@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch octal_to_decimal",
+            "request": "launch",
+            "mainClass": "octal_to_decimal",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
             "name": "Launch matrix_sort",
             "request": "launch",
             "mainClass": "matrix_sort",
