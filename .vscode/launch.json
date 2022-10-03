@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch matrix_sort",
+            "request": "launch",
+            "mainClass": "matrix_sort",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
+            "name": "Launch quiz",
+            "request": "launch",
+            "mainClass": "quiz",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
             "name": "Launch quiz",
             "request": "launch",
             "mainClass": "quiz",
