@@ -9,7 +9,7 @@ public class matrix_sort {
         m=sc.nextInt();
         System.out.println("Enter the number N: ");
         n=sc.nextInt();
-        if (m>3&&m<10) {
+        if (m>2&&m<10&&n>2&&n<10) {
             a=new int [m][n];
         System.out.println("Enter the matrix");
            for (int i = 0; i < m; i++) {
@@ -20,21 +20,22 @@ public class matrix_sort {
            }
         }
         else {
-            System.out.println("Invalid M");
+            System.out.println("Invalid M or N");
             System.exit(0);
         }
         
        }
 
-       void sort(){
-        int tem;c=new int[m][m];
-        b=new int [(m-2)*(m-2)];int k=0;
-        for (int i = 1; i < m-1; i++) {
-            for (int j = 1; j < m-1; j++) {
-                b[k]=a[i][j];
+       void sort() {
+        int tem;c=new int[m][n];
+        b=new int [n];int k=0;
+        for (int p = 0; p < m; p++) {
+            for (int j = 0; j < n; j++) {
+                b[k]=a[p][j];
+                //System.out.print(b[k]);
                 k++;
             }
-        }
+        
         for (int i = 0; i < k-1; i++) {
             for (int j = 0; j < k-1-i; j++) {
                if(b[j]>b[j+1])
@@ -45,11 +46,31 @@ public class matrix_sort {
                }
             }
         }
+        k=0;
+            for (int j = 0; j < n; j++) {
+               c[p][j]=b[k];
+               k++;
+            }
         
+        k=0;
+    }
+    }
+
+       void print()
+       {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(c[i][j]+"\t");
+                
+            }
+            System.out.println("");
+        }
        }
 
     public static void main(String[] args) {
         matrix_sort obj = new matrix_sort();
         obj.input();
+        obj.sort();
+        obj.print();
     }
 }
