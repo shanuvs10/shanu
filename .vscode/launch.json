@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch array_format",
+            "request": "launch",
+            "mainClass": "array_format",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
             "name": "Launch words_vovel",
             "request": "launch",
             "mainClass": "words_vovel",
