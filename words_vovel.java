@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class words_vovel {
-String s;
+String strin;
     void input(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
-        s=sc.next();
-        s=s.toUpperCase();
-        s=" "+s;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i)=='.'||s.charAt(i)=='?'||s.charAt(i)=='!') {
+        strin=sc.next();
+        strin=strin.toUpperCase();
+        //strin=" "+strin;
+        for (int i = 0; i < strin.length(); i++) {
+            if (strin.charAt(i)=='.'||strin.charAt(i)=='?'||strin.charAt(i)=='!') {
                 System.out.println("Invalid Statement");
                 System.exit(0);
             }
@@ -16,10 +16,10 @@ String s;
     }
     boolean check(String ch)
     {
-        ch=ch.trim();
+        ch.trim();
         if (ch.charAt(0)=='A'||ch.charAt(0)=='E'||ch.charAt(0)=='I'||ch.charAt(0)=='O'||ch.charAt(0)=='U') {
             if (ch.charAt(ch.length()-1)=='A'||ch.charAt(ch.length()-1)=='E'||ch.charAt(ch.length()-1)=='I'||ch.charAt(ch.length()-1)=='O'||ch.charAt(ch.length()-1)=='U') {
-                System.out.println("1");
+                System.out.println("-checks-");
                 return true;
             }
         }
@@ -28,8 +28,10 @@ String s;
     void words(String s)
     {
         int k=0,c=0;
+        System.out.println(66);
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i)==' ') {
+                System.out.println(55);
                 System.out.println(s.substring(k, i));
                 if (check(s.substring(k, i))) {
                     System.out.println("1");
@@ -40,10 +42,15 @@ String s;
         }
         System.out.println("No of words beginning and ending with a vowel : "+c);
     }
+
+    void display()
+    {
+        words(strin);
+    }
     public static void main(String[] args) {
         words_vovel obj = new words_vovel();
-        //obj.input();
-        //System.out.println(obj.check("YOU"));
-        obj.words("where are you now are ");
+        obj.input();
+        obj.display();
+        //obj.words("WHER ARE YOU NOW AEIOU OU YOU ");
     }
 }
