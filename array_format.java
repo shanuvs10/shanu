@@ -16,7 +16,7 @@ public class array_format {
     void sort()
     {
         for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
+            for (int j = 0; j < a.length-1-i; j++) {
                 if(a[j]>a[j+1])
                 {
                     tem = a[j];
@@ -25,9 +25,11 @@ public class array_format {
                 }
             }
         }
+        System.out.println("Sorted Array : ");
         for (int i = 0; i < n; i++) {
-            System.out.println(a[i]);
+            System.out.print(a[i] +"\t");
         }
+        System.out.println("");
         
     }
     void matrix()
@@ -39,12 +41,29 @@ public class array_format {
             }
         }
 
+    void change(){
+        for (int i = 0; i < b.length; i++) {
+            for (int j = a.length-1; j >i; j--) {
+                b[i][j]=a[j-i-1];
+            }
+        }
+    }
+    void display(){
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                    System.out.print (b[i][j]);  
+                }
+                System.out.println("");
+            }
+        }
     
-
-
+     
     public static void main(String[] args) {
         array_format obj=new array_format();
         obj.input();
         obj.sort();
+        obj.matrix();
+        obj.change();
+        obj.display();
     }
 }

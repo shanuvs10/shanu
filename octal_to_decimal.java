@@ -1,6 +1,6 @@
 import java.util.*;
 public class octal_to_decimal {
-    int n,m,a[][];
+    int n,m,a[][],b[];
 
     void input(){
         Scanner sc=new Scanner(System.in);
@@ -25,25 +25,26 @@ public class octal_to_decimal {
         }
     }
 
-    void print()
-    {int s=0,p=0;
+    void cal()
+    {int s=0,p=n-1;
+        System.out.println("Filled matrix decimal equivalent");
         for (int i = 0; i < m; i++) {
                for (int j = 0; j < n; j++) {
-                   System.out.print(a[i][j]+"\t");
-                   p=n-1;
                    s=s+(a[i][j]*(int)Math.pow(8, p));
-                   System.out.println(s);
-                   System.out.println(a[i][j]*(int)Math.pow(8, p));
                    p--;
+                   System.out.print(a[i][j] + "\t");
                }
                System.out.print(s);
                System.out.println("");
+               p=n-1;
+               s=0;
            }
     }
+    
 
     public static void main(String[] args) {
         octal_to_decimal obj = new octal_to_decimal();
         obj.input();
-        obj.print();
+        obj.cal();
     }
 }
