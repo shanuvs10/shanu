@@ -32,26 +32,26 @@ public class array_format {
         System.out.println("");
         
     }
-    void matrix()
-    {
-        for (int i = 0; i < b.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-                    b[i][j]=a[j];    
-                }
+    
+    void cha(){
+        for(int i=n-1,r=0;i>=0;i--,r++)
+        {
+            for(int j =0;j<=i;j++)
+            {
+                b[r][j]=a[j];
             }
-        }
-
-    void change(){
-        for (int i = 0; i < b.length; i++) {
-            for (int j = a.length-1; j >i; j--) {
-                b[i][j]=a[j-i-1];
+            for(int k=n-1;k>i;k--)
+            {
+                b[r][k]=a[k-i-1];
             }
         }
     }
+
     void display(){
+        System.out.println(" ");
         for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < a.length; j++) {
-                    System.out.print (b[i][j]);  
+                    System.out.print (b[i][j]+"\t");  
                 }
                 System.out.println("");
             }
@@ -62,8 +62,7 @@ public class array_format {
         array_format obj=new array_format();
         obj.input();
         obj.sort();
-        obj.matrix();
-        obj.change();
+        obj.cha();
         obj.display();
     }
 }

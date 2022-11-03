@@ -5,8 +5,10 @@ String strin;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
         strin=sc.next();
+        
         strin=strin.toUpperCase();
-        //strin=" "+strin;
+        strin.trim();
+        strin=" "+strin;
         for (int i = 0; i < strin.length(); i++) {
             if (strin.charAt(i)=='.'||strin.charAt(i)=='?'||strin.charAt(i)=='!') {
                 System.out.println("Invalid Statement");
@@ -17,12 +19,14 @@ String strin;
     boolean check(String ch)
     {
         ch.trim();
-        if (ch.charAt(0)=='A'||ch.charAt(0)=='E'||ch.charAt(0)=='I'||ch.charAt(0)=='O'||ch.charAt(0)=='U') {
-            if (ch.charAt(ch.length()-1)=='A'||ch.charAt(ch.length()-1)=='E'||ch.charAt(ch.length()-1)=='I'||ch.charAt(ch.length()-1)=='O'||ch.charAt(ch.length()-1)=='U') {
+        char s=ch.charAt(0);
+        char e=ch.charAt((ch.length())-1);
+        System.out.println(s+e);
+        if ((s=='A'||s=='E'||s=='I'||s=='O'||s=='U')&&(e=='A'||e=='E'||e=='I'||e=='O'||e=='U')) {
                 System.out.println("-checks-");
                 return true;
             }
-        }
+        
         return false;
     }
     void words(String s)
@@ -30,6 +34,7 @@ String strin;
         int k=0,c=0;
         System.out.println(66);
         for (int i = 0; i < s.length(); i++) {
+            System.out.println("44");
             if (s.charAt(i)==' ') {
                 System.out.println(55);
                 System.out.println(s.substring(k, i));
@@ -37,7 +42,7 @@ String strin;
                     System.out.println("1");
                     c++;
                 }
-                k=i+1;
+                k=i;
             }
         }
         System.out.println("No of words beginning and ending with a vowel : "+c);
@@ -47,10 +52,27 @@ String strin;
     {
         words(strin);
     }
+
+    void calc(){
+        String s=strin,tem;
+        int k=0,c=0;
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)==' '){
+                tem=s.substring(k,i);
+                if(check(tem)){
+                    c++;
+                }
+                k=i;
+            }
+        }
+        System.out.println("vovels "+c);
+    }
     public static void main(String[] args) {
         words_vovel obj = new words_vovel();
         obj.input();
-        obj.display();
+        obj.calc();
+        //obj.display();
+        //System.out.println((obj.check("OUO")));
         //obj.words("WHER ARE YOU NOW AEIOU OU YOU ");
     }
 }
