@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Caesar_Cipher",
+            "request": "launch",
+            "mainClass": "Caesar_Cipher",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
             "name": "Launch octal_to_decimal",
             "request": "launch",
             "mainClass": "octal_to_decimal",

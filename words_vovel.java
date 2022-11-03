@@ -4,7 +4,7 @@ String strin;
     void input(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
-        strin=sc.next();
+        strin=sc.nextLine();
         
         strin=strin.toUpperCase();
         strin.trim();
