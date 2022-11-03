@@ -6,7 +6,9 @@ String str;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
         str=sc.nextLine();
-        
+        if (str.length()<3&&str.length()>100) {
+            System.exit(0);
+        }
     }
     void modify(){
         for(int i=0;i<str.length();i++){
