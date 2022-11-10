@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch length_wise",
+            "request": "launch",
+            "mainClass": "length_wise",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
             "name": "Launch Caesar_Cipher",
             "request": "launch",
             "mainClass": "Caesar_Cipher",

@@ -28,7 +28,7 @@ String str;
     public static void main(String[] args) {
         Caesar_Cipher obj = new Caesar_Cipher();
         obj.input();
-        System.out.println("The cipher text is ");
+        System.out.println("he cipher text is ");
         obj.modify();
     }
 }
