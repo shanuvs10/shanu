@@ -12,15 +12,22 @@ public class vertical_banner {
         for (int i = 0; i < s.length; i++) {
             System.out.println("Team "+(i+1)+" :");
             s[i]=sc.next();
-            if(big<s.length){
-                big=s.length;
+            if(big<s[i].length()){
+                big=s[i].length();
             }
         }
+        System.out.println(big);
     }
     void print(){
-        for (int i = 0; i <big; i++) {
-            for (int j = 0; j < n; j++) {
-                
+        for (int i = 0; i <n; i++) {
+            //System.out.println(s[i]);
+            for (int j = 0; j < big; j++) {
+                if (s[i].length()<big) {
+                    System.out.print(s[i].charAt(j));
+                }
+                else{
+                    System.out.println(s[i].charAt(j));
+                }
             }
         }
     }

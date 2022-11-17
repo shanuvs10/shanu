@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class words_vovel {
 String strin;
-String word[];
     void input(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");

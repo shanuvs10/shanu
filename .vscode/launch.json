@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pailndrome_word",
+            "request": "launch",
+            "mainClass": "pailndrome_word",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
+            "name": "Launch vertical_banner",
+            "request": "launch",
+            "mainClass": "vertical_banner",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
             "name": "Launch vertical_banner",
             "request": "launch",
             "mainClass": "vertical_banner",
