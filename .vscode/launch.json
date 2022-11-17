@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch vertical_banner",
+            "request": "launch",
+            "mainClass": "vertical_banner",
+            "projectName": "shanu_a649a000"
+        },
+        {
+            "type": "java",
             "name": "Launch length_wise",
             "request": "launch",
             "mainClass": "length_wise",

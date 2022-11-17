@@ -5,8 +5,7 @@ String word[];
     void input(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
-        strin=sc.nextLine();
-        
+        strin=sc.nextLine();   
         strin=strin.toUpperCase();
         strin=strin.trim();
         strin=strin+" ";
@@ -57,8 +56,6 @@ String word[];
         System.out.println("");
         System.out.println("No of words beginning and ending with a vowel : "+c);
     }
-
-
     public static void main(String[] args) {
         words_vovel obj = new words_vovel();
         obj.input();
