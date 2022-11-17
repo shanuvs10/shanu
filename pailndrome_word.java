@@ -25,7 +25,6 @@ public class pailndrome_word {
             if(s.charAt(i)==' '){
                 tem=s.substring(k,i); 
                 tem=tem.trim();
-                //System.out.println(tem);
                 System.out.print(change(tem)+" ");
                 k=i;
             }
@@ -51,7 +50,7 @@ public class pailndrome_word {
         pailndrome_word obj = new pailndrome_word();
         obj.input();
         obj.calc();
-        //System.out.println(obj.change("abb"));
+        
         
     }
 }
