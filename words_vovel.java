@@ -1,14 +1,15 @@
 import java.util.Scanner;
 public class words_vovel {
 String strin;
+String word[];
     void input(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
         strin=sc.nextLine();
         
         strin=strin.toUpperCase();
-        strin.trim();
-        strin=" "+strin;
+        strin=strin.trim();
+        strin=strin+" ";
         for (int i = 0; i < strin.length(); i++) {
             if (strin.charAt(i)=='.'||strin.charAt(i)=='?'||strin.charAt(i)=='!') {
                 System.out.println("Invalid Statement");
@@ -16,41 +17,16 @@ String strin;
             }
         }
     }
-    boolean check(String ch)
+    int check(String charte)
     {
-        ch.trim();
-        char s=ch.charAt(0);
-        char e=ch.charAt((ch.length())-1);
-        System.out.println(s+e);
-        if ((s=='A'||s=='E'||s=='I'||s=='O'||s=='U')&&(e=='A'||e=='E'||e=='I'||e=='O'||e=='U')) {
-                System.out.println("-checks-");
-                return true;
+        char temp1,temp2;
+        temp1=charte.charAt(0);
+        temp2=charte.charAt((charte.length())-1);
+        if ((temp1=='A'||temp1=='E'||temp1=='I'||temp1=='O'||temp1=='U')&&(temp2=='A'||temp2=='E'||temp2=='I'||temp2=='O'||temp2=='U')) {
+                return 1;
             }
         
-        return false;
-    }
-    void words(String s)
-    {
-        int k=0,c=0;
-        System.out.println(66);
-        for (int i = 0; i < s.length(); i++) {
-            System.out.println("44");
-            if (s.charAt(i)==' ') {
-                System.out.println(55);
-                System.out.println(s.substring(k, i));
-                if (check(s.substring(k, i))) {
-                    System.out.println("1");
-                    c++;
-                }
-                k=i;
-            }
-        }
-        System.out.println("No of words beginning and ending with a vowel : "+c);
-    }
-
-    void display()
-    {
-        words(strin);
+        return 0;
     }
 
     void calc(){
@@ -58,21 +34,34 @@ String strin;
         int k=0,c=0;
         for (int i = 0; i < s.length(); i++) {
             if(s.charAt(i)==' '){
-                tem=s.substring(k,i);
-                if(check(tem)){
+                tem=s.substring(k,i); 
+                tem=tem.trim();
+                if(check(tem)==1){
+                    System.out.print(tem +" ");
                     c++;
                 }
                 k=i;
             }
         }
-        System.out.println("vovels "+c);
+        k=0;
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)==' '){
+                tem=s.substring(k,i); 
+                tem=tem.trim();
+                if(check(tem)==0){
+                    System.out.print(tem +" ");
+                }
+                k=i;
+            }
+        }
+        System.out.println("");
+        System.out.println("No of words beginning and ending with a vowel : "+c);
     }
+
+
     public static void main(String[] args) {
         words_vovel obj = new words_vovel();
         obj.input();
         obj.calc();
-        //obj.display();
-        //System.out.println((obj.check("OUO")));
-        //obj.words("WHER ARE YOU NOW AEIOU OU YOU ");
     }
 }
