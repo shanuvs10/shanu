@@ -14,17 +14,19 @@ public class pailndrome_word {
                 System.out.println("Invalid Statement");
                 System.exit(0);
             }
+            
         }
     }
     void calc(){
         String s=strin,tem;
+        System.out.println(s);
         int k=0;
         for (int i = 0; i < s.length(); i++) {
             if(s.charAt(i)==' '){
                 tem=s.substring(k,i); 
                 tem=tem.trim();
-                System.out.println(tem);
-                //System.out.println(change(tem));
+                //System.out.println(tem);
+                System.out.print(change(tem)+" ");
                 k=i;
             }
         }
@@ -33,24 +35,23 @@ public class pailndrome_word {
         String fin="";
         if(word.charAt(word.length()-2)==word.charAt(word.length()-1)){
             fin=word;
-            
-            for (int i =word.length()-2; i >0; i--) {
-                fin=""+word.charAt(i);
+            for (int i =word.length()-3; i >=0; i--) {
+                fin=fin+word.charAt(i);
             }
         }
         else{
             fin=word;
-            for (int i =word.length()-1; i >0; i--) {
-                fin=""+word.charAt(i);
+            for (int i =word.length()-2; i >=0; i--) {
+                fin=fin+word.charAt(i);
             }
         }
         return fin;
     }
     public static void main(String[] args) {
         pailndrome_word obj = new pailndrome_word();
-        //obj.input();
-        //obj.calc();
-        System.out.println(obj.change("the"));
+        obj.input();
+        obj.calc();
+        //System.out.println(obj.change("abb"));
         
     }
 }

@@ -13,6 +13,7 @@ String strin;
                 System.out.println("Invalid Statement");
                 System.exit(0);
             }
+            
         }
     }
     int check(String charte)
