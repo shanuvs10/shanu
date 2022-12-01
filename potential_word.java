@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class potential_word {
     String strin;int a[];
     String b[];
