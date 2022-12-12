@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch length_wise",
+            "request": "launch",
+            "mainClass": "length_wise",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
             "name": "Launch potential_word",
             "request": "launch",
             "mainClass": "potential_word",

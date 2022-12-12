@@ -1,11 +1,9 @@
 import java.util.*;
-import java.io.*;
 public class potential_word {
     String strin;
     String a[];
     static String s;
     void input(){
-        int c=0;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String: ");
         strin=sc.nextLine();   
@@ -57,13 +55,13 @@ public class potential_word {
         potential_word obj=new potential_word();
         int flag=0;
         obj.input();
-        
+        s=s.trim();
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i)!='.'||s.charAt(i)!='?'||s.charAt(i)!='!'||s.charAt(i)!=' '||Character.isDigit(s.charAt(i))) {
-                flag=0;
+            if (s.charAt(i)=='.'||s.charAt(i)=='?'||s.charAt(i)=='!'||s.charAt(i)==' '||Character.isLetter(s.charAt(i))) {
+                flag=1;
             }
             else{
-                flag=1;
+                flag=0;
             }
             
         }
