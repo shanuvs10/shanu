@@ -9,6 +9,13 @@
             "name": "Launch potential_word",
             "request": "launch",
             "mainClass": "potential_word",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
+            "name": "Launch potential_word",
+            "request": "launch",
+            "mainClass": "potential_word",
             "projectName": "shanu_ca24d25d"
         },
         {
