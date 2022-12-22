@@ -23,16 +23,28 @@ public class common_word {
         }
 
     }
+    void display(){
+        for(int i = 0; i < a.length ; i++){
+
+        }
+    }
     void calc(){
-        int c=0;
+        int c=0,b=0;
         for (int i = 0; i < a.length ; i++){
             for (int j = 0; j < a.length ; j++){
-                if (a[i] == a[j]) {
-                    c++;
+                if (a[i].equals(a[j])) {
+                    for(int k = 0; k < a.length ; k++){
+                        if(a[j].equals(a[k])&&b==1)
+                        c++;
+                    }
+                    
                 }
             }
-                System.out.println(a[i]+" = "+ c);
-                c=0;
+            if (c>1) {
+               System.out.println(a[i]+" = "+ c);
+                 
+            }
+            c=0; 
             
             }
         }
