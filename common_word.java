@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class common_word {
     String strin;
-    String a[];
+    String a[];int h=0;
     static String s;
     void input(){
         Scanner sc=new Scanner(System.in);
@@ -23,29 +23,41 @@ public class common_word {
         }
 
     }
-    void display(){
-        for(int i = 0; i < a.length ; i++){
-
-        }
-    }
+  /*   void display(){
+        int l=n.length();
+        for(int i=0;i<l-1;i++){
+            char ch=n.charAt(i);
+            if(ch!='.'&&ch!='?'&&ch!='!'&&ch!=' ')
+            {x=x+ch;}
+            else{
+            a[h]=x;
+            h++;
+            x="";}}
+            System.out.println("COMMON WORDS FREQUENCY");
+        for(int i=0;i<h;i++){
+            int c=1;
+            for(int j=i+1;j<h;j++){
+            if(a[i].equals(a[j]))
+            {for(int k=j;k<h-1;k++)
+            a[k]=a[k+1];
+            h--;
+            c++;}}
+            if(c>1)
+            System.out.println(a[i]+"\t\t"+c);}}
+    }*/
     void calc(){
         int c=0,b=0;
         for (int i = 0; i < a.length ; i++){
-            for (int j = 0; j < a.length ; j++){
+            for (int j = i; j < a.length ; j++){
                 if (a[i].equals(a[j])) {
-                    for(int k = 0; k < a.length ; k++){
-                        if(a[j].equals(a[k])&&b==1)
                         c++;
-                    }
-                    
                 }
             }
+            
             if (c>1) {
-               System.out.println(a[i]+" = "+ c);
-                 
+               System.out.println(a[i]+" = "+ c);  
             }
             c=0; 
-            
             }
         }
     public static void main(String[] args) {
