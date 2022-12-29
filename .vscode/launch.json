@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch comm",
+            "request": "launch",
+            "mainClass": "testprojects.comm",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
+            "name": "Launch CommonWords",
+            "request": "launch",
+            "mainClass": "CommonWords",
+            "projectName": "shanu_78d2764b"
+        },
+        {
+            "type": "java",
             "name": "Launch common_word",
             "request": "launch",
             "mainClass": "common_word",

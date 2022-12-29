@@ -1,9 +1,11 @@
+package testprojects;
+
 import java.util.Scanner;
 
-public class common_word {
+public class comm {
     public static void main(String args[]) {
         String x = "";
-        int d = 0, b = 0;
+        int h = 0, z = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the String");
         String n = sc.nextLine();
@@ -12,14 +14,16 @@ public class common_word {
         for (int i = 0; i < l; i++) {
             char ch = n.charAt(i);
             if (ch == '.' || ch == '?' || ch == '!') {
-                b++;
+                z++;
             }
         }
-        if (b == 2) {
+        if (z == 2) {
             for (int i = 0; i < l; i++) {
                 char ch = n.charAt(i);
                 if (ch == '.' || ch == '?' || ch == '!') {
-                    n = (n.substring(0, i + 1)) + (n.substring(i + 2, l));
+                    String p = (n.substring(0, i + 1));
+                    String m = (n.substring(i + 2, l));
+                    n = p + m;
                     System.out.println(n.substring(0, i + 1));
                     System.out.println(n.substring(i + 1));
                     break;
@@ -30,19 +34,19 @@ public class common_word {
                 if (ch != '.' && ch != '?' && ch != '!' && ch != ' ') {
                     x = x + ch;
                 } else {
-                    a[d] = x;
-                    d++;
+                    a[h] = x;
+                    h++;
                     x = "";
                 }
             }
             System.out.println("COMMON WORDS FREQUENCY");
-            for (int i = 0; i < d; i++) {
+            for (int i = 0; i < h; i++) {
                 int c = 1;
-                for (int j = i + 1; j < d; j++) {
+                for (int j = i + 1; j < h; j++) {
                     if (a[i].equals(a[j])) {
-                        for (int k = j; k < d - 1; k++)
+                        for (int k = j; k < h - 1; k++)
                             a[k] = a[k + 1];
-                        d--;
+                        h--;
                         c++;
                     }
                 }
