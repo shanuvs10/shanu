@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Number",
+            "request": "launch",
+            "mainClass": "lab.Number",
+            "projectName": "shanu_ca24d25d"
+        },
+        {
+            "type": "java",
             "name": "Launch comm",
             "request": "launch",
             "mainClass": "testprojects.comm",
