@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch mobius",
+            "request": "launch",
+            "mainClass": "mobius",
+            "projectName": "shanu_ca24d25d"
+        },
+        {
+            "type": "java",
             "name": "Launch Number",
             "request": "launch",
             "mainClass": "lab.Number",
