@@ -1,0 +1,13 @@
+The coordinates of a point P on a two-dimensional plane can be represented by P(x, y) with x as the x-coordinate and y as the y-coordinate. The coordinates of the midpoint of two points P1(x1, y1) and P2(x2, y2) can be calculated as P(x, y) where: [10]
+x=x1+x22,y=y1+y22
+Design a class Point with the following details:
+Class name: Point
+Data Members/instance variables:
+x: stores the x-coordinate
+y: stores the y-coordinate
+Member functions:
+Point (): constructor to initialize x = 0, y = 0
+void readpoint (): accepts the coordinates x and y of a point
+Point midpoint (Point A, Point B): calculates and returns the midpoint of the two points A and B
+void displaypoint (): displays the coordinates of a point
+Specify the class Point giving details of the constructor (), member functions void readpoint ( ), Point midpoint (Point, Point) and void displaypoint () along with the main () function to create an object and call the functions accordingly to calculate the midpoint between any two given points.
