@@ -28,7 +28,7 @@ static String s;
         s=s.substring(0,s.length()-1);
         int k=0,c=0;
         for (int i = 0; i < s.length(); i++) {
-            if(s.charAt(i)==' '){
+            if(s.charAt(i)==' '||s.charAt(i)=='.'){
                 tem=s.substring(k,i); 
                 tem=tem.trim();
                 if(check(tem)==1){

@@ -18,7 +18,7 @@ public class pailndrome_word {
         s=s.substring(0,s.length()-1);
         int k=0;
         for (int i = 0; i < s.length(); i++) {
-            if(s.charAt(i)==' '){
+            if(s.charAt(i)==' '||s.charAt(i)=='.'||s.charAt(i)=='?'){
                 tem=s.substring(k,i); 
                 tem=tem.trim();
                 System.out.print(change(tem)+" ");

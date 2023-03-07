@@ -19,10 +19,19 @@ public class matrix_sort {
                }
            }
         }
+        
         else {
             System.out.println("Invalid M or N");
             System.exit(0);
         }
+        System.out.println("Original matrix");
+           for (int i = 0; i < m; i++) {
+               for (int j = 0; j < n; j++) {
+                   System.out.print(a[i][j]+" ");
+                   
+               }
+               System.out.println("");
+           }
         
        }
 
@@ -71,6 +80,7 @@ public class matrix_sort {
         matrix_sort obj = new matrix_sort();
         obj.input();
         obj.sort();
+        System.out.println("MATRIX AFTER SORTING ROWS");
         obj.print();
     }
 }
